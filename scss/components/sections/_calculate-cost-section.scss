@@ -1,0 +1,134 @@
+.calculate-cost-section{
+	padding: 120px 0 150px;
+
+	&:not(:last-of-type){
+		padding-bottom: 55px;
+	}
+
+	.seo-text-section + &{
+		padding-top: 55px;
+	}
+
+	.section-caption{
+		margin-bottom: 30px;
+
+		.sc-title{
+			font-size: 32px;
+		}
+	}
+
+	.section-middle{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+		min-height: 158px;
+		background: url(../img/backgrounds/wood-bg.jpg) no-repeat center center / cover;
+		padding: 20px 355px 20px 45px;
+		border-radius: $r $r 0 $r;
+		text-align: right;
+
+		.btn{
+			max-width: 255px;
+		}
+
+		.right-image{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+
+			img{
+				display: block;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+
+		.back-image{
+			position: absolute;
+			right: 60px;
+			bottom: calc(100% + 5px);
+			z-index: -1;
+
+			img{
+				display: block;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+
+		.sm-text{
+			font-size: 16px;
+			line-height: 2;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: #fff;
+			max-width: 440px;
+		}
+
+		.big-phone-link{
+			margin-top: 12px;
+			display: block;
+		}
+
+		@media screen and (max-width: 1199px){
+			padding-right: 245px;
+
+			.right-image{
+				width: 220px;
+			}
+		}
+
+		@media screen and (max-width: 991px){
+			margin-top: 90px;
+			padding: 30px 15px 180px;
+			margin-bottom: 88px;
+
+			.sm-text{
+				text-align: center;
+				max-width: unset;
+			}
+
+			.back-image{
+				height: 85px;
+				left: 50%;
+				right: auto;
+				transform: translateX(-50%);
+
+				img{
+					max-height: 100%;
+				}
+			}
+
+			.right-image{
+				img{
+					height: 170px;
+					width: auto;
+				}
+			}
+
+			.item{
+				width: 100%;
+			}
+
+			.section-button{
+				position: absolute;
+				left: 0;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				top: calc(100% + 30px);
+			}
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.section-button{
+			.btn{
+				width: 100%;
+				max-width: unset;
+			}
+		}
+	}
+}

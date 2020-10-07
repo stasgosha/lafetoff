@@ -1,0 +1,54 @@
+.breadcrumbs-section{
+	padding: 20px 0;
+}
+
+.breadcrumbs{
+	font-size: 11px;
+	line-height: 15px;
+	display: flex;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	flex-wrap: wrap;
+	margin-bottom: -5px;
+
+	li{
+		margin-right: 26px;
+		position: relative;
+		margin-bottom: 5px;
+
+		&:after{
+			content: '»';
+			display: block;
+			font-size: 13px;
+			line-height: 13px;
+			font-family: inherit;
+			position: absolute;
+			right: -17px;
+			top: 0;
+		}
+
+		&:last-child{
+			margin-right: 0;
+
+			&:after{
+				display: none;
+			}
+		}
+
+		a{
+			color: inherit;
+			text-decoration: underline;
+
+			&:hover{
+				color: $primary;
+			}
+		}
+
+		&:last-child{
+			a{
+				pointer-events: none;
+				cursor: default;
+			}
+		}
+	}
+}

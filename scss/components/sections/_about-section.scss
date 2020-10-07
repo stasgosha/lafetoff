@@ -1,0 +1,152 @@
+.about-section{
+	padding: 120px 0 55px;
+
+	.breadcrumbs-section + &{
+		padding-top: 50px;
+	}
+
+	.section-inner{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 35px;
+	}
+
+	.section-content{
+		max-width: 680px;
+	}
+
+	.section-image{
+		width: 400px;
+		flex: none;
+		margin-left: 30px;
+
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+			border-top-right-radius: 80px;
+		}
+	}
+
+	.section-footer{
+		position: relative;
+		margin-left: 50px;
+		padding-left: 165px;
+		background: url(../img/backgrounds/wood-bg.jpg) no-repeat center center / cover;
+		border-radius: 0 0 $r 15px;
+		min-height: 135px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		display: flex;
+		align-items: center;
+
+		&:before{
+			content: '';
+			display: block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 0 20px 25px;
+			border-color: transparent transparent #ddb783 transparent;
+			position: absolute;
+			right: 417px;
+			bottom: 100%;
+		}
+
+		.left-image{
+			position: absolute;
+			top: -27px;
+			left: -85px;
+		}
+
+		.sf-text{
+			font-weight: bold;
+			color: #fff;
+			text-transform: uppercase;
+			max-width: 570px;
+		}
+
+		.right-image{
+			position: absolute;
+			bottom: 0;
+			right: 10px;
+
+			img{
+				display: block;
+			}
+		}
+	}
+
+	.section-additional-text{
+		padding-top: 65px;
+	}
+
+	.section-caption{
+		margin-bottom: 25px;
+	}
+
+	@media screen and (max-width: 1199px){
+		.section-footer{
+			.sf-text{
+				max-width: 320px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		.section-inner{
+			margin-bottom: 55px;
+			flex-direction: column;
+		}
+
+		.section-image{
+			margin-left: 0;
+			width: 100%;
+			margin-top: 75px;
+
+			img{
+				width: 100%;
+			}
+		}
+
+		.section-footer{
+			flex-direction: column;
+			padding: 25px 15px;
+			margin-left: 0;
+			min-height: unset;
+			border-radius: $r 0 0 $r;
+
+			.sf-text{
+				max-width: unset;
+			}
+
+			&:before{
+				right: 233px;
+			}
+
+			.right-image{
+				right: 40px;
+				top: auto;
+				width: 215px;
+				bottom: 100%;
+
+				img{
+					display: block;
+					max-width: 100%;
+					height: auto;
+				}
+			}
+
+			.left-image{
+				left: auto;
+				top: auto;
+				right: -15px;
+				bottom: -110px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		padding-top: 70px;
+	}
+}

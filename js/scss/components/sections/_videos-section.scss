@@ -1,0 +1,20 @@
+.videos-section{
+	padding: 50px 0 55px;
+
+	.section-footer{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 60px;
+	}
+
+	.videos-list{
+		.item{
+			margin-bottom: 12px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+}

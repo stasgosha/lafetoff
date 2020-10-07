@@ -1,0 +1,13 @@
+.small-contacts-section{
+	padding: 100px 0 55px;
+
+	@media screen and (max-width: 991px){
+		.cards-list{
+			margin-bottom: -45px;
+
+			.item{
+				margin-bottom: 45px;
+			}
+		}
+	}
+}
