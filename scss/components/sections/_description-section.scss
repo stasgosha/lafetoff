@@ -1,0 +1,119 @@
+.description-section{
+	padding: 100px 0 60px;
+
+	.section-inner{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.section-content,
+	.section-image{
+		width: calc(50% - 15px);
+		flex: none;
+	}
+
+	@media screen and (max-width: 991px){
+		.section-inner{
+			flex-direction: column-reverse;
+		}
+
+		.section-content,
+		.section-image{
+			width: 100%;
+		}
+
+		.section-image{
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.plans-block{
+	position: relative;
+	padding: 11px;
+	border-radius: $r;
+	box-shadow: $shadow;
+	background: #fff;
+
+	img{
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+
+	.block-nav{
+		position: absolute;
+		top: 30px;
+		right: 25px;
+		list-style: none;
+		z-index: 10;
+
+		li{
+			margin-bottom: 10px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			button{
+				font-size: 16px;
+				line-height: 1.25;
+				text-decoration: underline;
+				color: $text-color;
+				cursor: pointer;
+				text-transform: uppercase;
+				font-weight: 600;
+				position: relative;
+				padding: 0;
+				display: block;
+
+				&:before{
+					content: '';
+					display: block;
+					width: 20px;
+					height: 11px;
+					background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 11'%3E%3Cpath fill-rule='evenodd' fill='%230BBB62' d='M20 5.5L10 11 0 5.5 10 0l10 5.5m-9.98-3.22L2.82 5.5l7.2 3.23 7.2-3.23-7.2-3.22'/%3E%3C/svg%3E") no-repeat center center / contain;
+					opacity: 0;
+					visibility: hidden;
+					transition: all $t;
+					position: absolute;
+					top: 50%;
+					transform: translate(-30px, -50%);
+					left: -30px;
+				}
+
+				&:hover,
+				&:focus{
+					outline: none;
+					color: $primary;
+				}
+
+				@media screen and (max-width: 767px){
+					font-size: 12px;
+				}
+			}
+
+			&.current-menu-item{
+				button{
+					color: $primary;
+
+					&:before{
+						opacity: 1;
+						transform: translate(0, -50%);
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+
+	.zoom-icon{
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+
+		i{
+			display: block;
+		}
+	}
+}

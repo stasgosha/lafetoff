@@ -102,3 +102,31 @@
 		}
 	}
 }
+
+.file-input{
+	position: relative;
+
+	input{
+		appearance: none;
+
+		+ label{
+			width: 100%;
+			height: 50px;
+			background: #fff;
+			border-radius: $r;
+			border: 1px solid $primary;
+			color: $text-color;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&.selected{
+			& + label{
+				background: $primary;
+				color: #fff;
+			}
+		}
+	}
+}

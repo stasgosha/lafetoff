@@ -23,6 +23,15 @@ $(function () {
 
 
 document.addEventListener('DOMContentLoaded', function(){
+	$('[type="tel"]').mask("+7 (999) 999-99-99");
+
+	$('input[type="file"]').on('change', function(){
+		if ($(this)[0].files[0] !== undefined) {
+			$(this).addClass('selected');
+		} else{
+			$(this).removeClass('selected');
+		}
+	});
 
 	// Accordions
 	$('.accordion').each(function(i, el){
@@ -367,9 +376,16 @@ document.addEventListener('DOMContentLoaded', function(){
 		$(dest).find('.slick-slider').slick('setPosition');
 	});
 
-	$(".filter-nav").each(function(i, el){
+	$(".filter-nav, .tabs-nav, .plans-block .block-nav").each(function(i, el){
 		$(el).find('[data-tab]').eq(0).click();
 	});
+
+	$('.tabs-select').on('change', function(){
+		goToTab($(this).val());
+	});
+
+	// Fancybox
+	$(".fancybox").fancybox();
 
 	// Video
 	$('.video-block:not([data-video-modal])').on('click', function () {
