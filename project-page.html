@@ -7,7 +7,7 @@
 
 	<link rel="stylesheet" href="css/slick.min.css">
 	<link rel="stylesheet" href="css/slick-theme.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 
 	<link rel="stylesheet" href="css/main.css">
 
@@ -154,6 +154,11 @@
 										<img src="img/content-images/project-big-image.jpg" alt="">
 									</div>
 								</div>
+								<div class="slide">
+									<div class="big-image-card">
+										<img src="img/content-images/project-big-image.jpg" alt="">
+									</div>
+								</div>
 							</div>
 							<div class="slider-previews">
 								<div class="item">
@@ -176,12 +181,49 @@
 										<img src="img/content-images/project-preview.jpg" alt="">
 									</div>
 								</div>
+								<!-- Если всего 5 фото - выводить эту карточку как те, что выше -->
 								<div class="item">
-									<div class="preview-card">
+									<button class="preview-card js-project-gallery-trigger">
 										<div class="card-count">+7</div>
 										<img src="img/content-images/project-preview.jpg" alt="">
-									</div>
+									</button>
 								</div>
+							</div>
+							<!-- Нужно не забыть подключить стили и js для fancybox -->
+							<div class="slider-fancybox-items-wrapper visually-hidden">
+								<a href="img/content-images/project-big-image.jpg" class="fancybox" data-fancybox="project-gallery">
+									<img src="img/content-images/project-preview.jpg" alt="">
+								</a>
+								<a href="img/content-images/project-big-image.jpg" class="fancybox" data-fancybox="project-gallery">
+									<img src="img/content-images/project-preview.jpg" alt="">
+								</a>
+								<a href="img/content-images/project-big-image.jpg" class="fancybox" data-fancybox="project-gallery">
+									<img src="img/content-images/project-preview.jpg" alt="">
+								</a>
+								<a href="img/content-images/project-big-image.jpg" class="fancybox" data-fancybox="project-gallery">
+									<img src="img/content-images/project-preview.jpg" alt="">
+								</a>
+								<a href="img/content-images/project-big-image.jpg" class="fancybox" data-fancybox="project-gallery">
+									<img src="img/content-images/project-preview.jpg" alt="">
+								</a>
+								<a href="img/content-images/project-big-image.jpg" class="fancybox" data-fancybox="project-gallery">
+									<img src="img/content-images/project-preview.jpg" alt="">
+								</a>
+								<a href="img/content-images/project-big-image.jpg" class="fancybox" data-fancybox="project-gallery">
+									<img src="img/content-images/project-preview.jpg" alt="">
+								</a>
+								<a href="img/content-images/project-big-image.jpg" class="fancybox" data-fancybox="project-gallery">
+									<img src="img/content-images/project-preview.jpg" alt="">
+								</a>
+								<a href="img/content-images/project-big-image.jpg" class="fancybox" data-fancybox="project-gallery">
+									<img src="img/content-images/project-preview.jpg" alt="">
+								</a>
+								<a href="img/content-images/project-big-image.jpg" class="fancybox" data-fancybox="project-gallery">
+									<img src="img/content-images/project-preview.jpg" alt="">
+								</a>
+								<a href="img/content-images/project-big-image.jpg" class="fancybox" data-fancybox="project-gallery">
+									<img src="img/content-images/project-preview.jpg" alt="">
+								</a>
 							</div>
 						</div>
 
@@ -808,7 +850,7 @@
 							<p class="copyright">© 2020. Все права защищены. Использование материалов без согласия с администрацией сайта запрещено и преследуется по закону</p>
 						</div>
 						<div class="footer-block">
-							<a href="https://webolution.ru/" class="webolution">
+							<a href="//webolution.ru/" class="webolution">
 								<img src="img/webolution.png" alt="Webolution — агентство Интернет-маркетинга">
 							</a>
 						</div>
@@ -915,7 +957,7 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.js" type="text/javascript"></script>
-	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 	<script src="//www.youtube.com/iframe_api"></script>
 	<script src="js/scripts.js"></script>
 </body>

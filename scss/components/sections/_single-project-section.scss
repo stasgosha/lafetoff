@@ -25,15 +25,6 @@
 		.item{
 			padding: 0 10px;
 			width: 20%;
-
-			&:nth-child(5){
-				.preview-card{
-					&:before{
-						opacity: .4;
-						cursor: default;
-					}
-				}
-			}
 		}
 
 		@media screen and (max-width: 767px){
@@ -101,6 +92,11 @@
 	box-shadow: 0 4px 15px rgba(#000, .09);
 	position: relative;
 	cursor: pointer;
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	appearance: none;
+	background: #fff;
 	
 	&:before{
 		content: '';
@@ -136,8 +132,14 @@
 		color: #fff;
 	}
 
+	&:focus{
+		outline: none;
+	}
+
 	&:hover,
 	&.current{
+		outline: none;
+
 		&:before{
 			opacity: 0;
 		}

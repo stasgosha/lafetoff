@@ -208,6 +208,12 @@ document.addEventListener('DOMContentLoaded', function(){
 			]
 		});
 
+		$(el).find('.js-project-gallery-trigger').click(function(e){
+			e.preventDefault();
+
+			$('.slider-fancybox-items-wrapper .fancybox:nth-child(5)').click();
+		});
+
 		$(el).find('.preview-card[data-slide]').click(function(){
 			$(el).find('.big-image-slider').slick('slickGoTo', parseInt($(this).data('slide')) - 1)
 		});
@@ -385,7 +391,9 @@ document.addEventListener('DOMContentLoaded', function(){
 	});
 
 	// Fancybox
-	$(".fancybox").fancybox();
+	if ($('a, div').is('.fancybox')) {
+		$(".fancybox").fancybox();
+	}
 
 	// Video
 	$('.video-block:not([data-video-modal])').on('click', function () {
